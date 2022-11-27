@@ -30,14 +30,14 @@ string getStringFromUser(string userInformation)
 int numN = getIntNumberFromUser("Введите длину массива ");
 string[] UserArray = new string[numN];
 string[] UserArrayResult = new string[0];
-for (int i=0; i<numN; i++)
+for (int i = 0; i < numN; i++)
 {
-    UserArray[i]=getStringFromUser("Введите значение массива № "+ i +" ");
+    UserArray[i] = getStringFromUser("Введите значение массива № " + i + " ");
 }
 
-for (int i=0; i<numN; i++)
+for (int i = 0; i < numN; i++)
 {
-   if(UserArray[i].Length<=3)
+    if (UserArray[i].Length <= 3)
     {
         Array.Resize(ref UserArrayResult, UserArrayResult.Length + 1);
         UserArrayResult[UserArrayResult.Length - 1] = UserArray[i];
@@ -45,10 +45,10 @@ for (int i=0; i<numN; i++)
 }
 
 Console.Write("Результат отбора [");
-for (int i=0; i<UserArrayResult.Length; i++)
+for (int i = 0; i < UserArrayResult.Length; i++)
 {
     Console.Write(UserArrayResult[i]);
-    if (i<UserArrayResult.Length)
+    if (i < UserArrayResult.Length)
     {
         Console.Write(", ");
     }
